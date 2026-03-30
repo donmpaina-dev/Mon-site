@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecole Eureka</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- En-tête -->
+  <header>
+    <h1>École Eureka</h1>
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#programmes">Programmes</a></li>
+        <li><a href="#inscription">Inscription</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Section Accueil -->
+  <section id="accueil">
+    <h2>Bienvenue à l'École Eureka</h2>
+    <p>Nous formons les leaders de demain grâce à une pédagogie innovante et inclusive.</p>
+  </section>
+
+  <!-- Section Programmes -->
+  <section id="programmes">
+    <h2>Nos Programmes</h2>
+    <div class="cards">
+      <div class="card">Éducation préscolaire</div>
+      <div class="card">École primaire</div>
+      <div class="card">École secondaire</div>
+    </div>
+  </section>
+
+  <!-- Section Inscription -->
+  <section id="inscription">
+    <h2>Inscrivez-vous</h2>
+    <form>
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" required>
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" required>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <!-- Section Contact -->
+  <section id="contact">
+    <h2>Contactez-nous</h2>
+    <p>Email : contact@ecole-eureka.com</p>
+    <p>Téléphone : +243 000 000 000</p>
+    <!-- Bouton Facebook -->
+    <div class="facebook">
+      <a href="https://www.facebook.com/ecoleeureka" target="_blank">
+        <button>Suivez-nous sur Facebook</button>
+      </a>
+    </div>
+  </section>
+
+  <header>
+  <h1>École Eureka</h1>
+  <nav>
+    <ul id="menu">
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#programmes">Programmes</a></li>
+      <li><a href="#inscription">Inscription</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <!-- Bouton hamburger -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+</header>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("open");
+  }
+</script>
+
+  <!-- Pied de page -->
+  <footer>
+    <p>&copy; 2026 École Eureka. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
