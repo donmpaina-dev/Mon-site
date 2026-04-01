@@ -28,7 +28,6 @@
     </section>
 
     <section class="pubs">
-      <h2>Publicités</h2>
       <div class="pub">[Espace pub 1]</div>
       <div class="pub">[Espace pub 2]</div>
     </section>
@@ -41,6 +40,64 @@
       <p><strong>Email :</strong> contact@ecole-eureka.com</p>
     </section>
 
+    <!-- Accueil bilingue -->
+  <section id="accueil">
+    <h2>Bienvenue à l'École Eureka</h2>
+    
+    <!-- Boutons de langue -->
+    <div class="lang-switch">
+      <button onclick="setLanguage('fr')">🇫🇷 Français</button>
+      <button onclick="setLanguage('en')">🇬🇧 English</button>
+    </div>
+
+    <!-- Contenu en français -->
+    <div id="accueil-fr">
+      <p>Notre mission est d’offrir une éducation de qualité qui développe la curiosité, la créativité et le sens de la responsabilité chez chaque élève.</p>
+      <p>L’École Eureka valorise l’excellence académique, le respect mutuel et l’ouverture culturelle.</p>
+      <p>Nous proposons des programmes adaptés aux différents niveaux : primaire, secondaire et activités extrascolaires.</p>
+    </div>
+
+    <!-- Contenu en anglais -->
+    <div id="accueil-en" style="display:none;">
+      <p>Our mission is to provide high-quality education that nurtures curiosity, creativity, and responsibility in every student.</p>
+      <p>École Eureka values academic excellence, mutual respect, and cultural openness.</p>
+      <p>We offer programs tailored to different levels: primary, secondary, and extracurricular activities.</p>
+    </div>
+  </section>
+
+  <!-- JavaScript intégré -->
+  <script>
+    function setLanguage(lang) {
+      if (lang === 'fr') {
+        document.getElementById('accueil-fr').style.display = 'block';
+        document.getElementById('accueil-en').style.display = 'none';
+      } else {
+        document.getElementById('accueil-fr').style.display = 'none';
+        document.getElementById('accueil-en').style.display = 'block';
+      }
+    }
+  </script>
+
+  <script>
+  // Clé de mise à jour automatique
+  const updateKey = "v1.0"; // tu changes cette valeur quand tu modifies ton code
+
+  function checkUpdate() {
+    // Vérifie si la clé a changé (exemple simplifié)
+    fetch(window.location.href, {cache: "no-store"})
+      .then(response => response.text())
+      .then(html => {
+        if (!html.includes(updateKey)) {
+          console.log("Nouvelle version détectée, rechargement...");
+          location.reload();
+        }
+      });
+  }
+
+  // Vérifie toutes les 2 minutes
+  setInterval(checkUpdate, 120000);
+</script>
+
     
   </main>
 
@@ -49,12 +106,3 @@
   </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
